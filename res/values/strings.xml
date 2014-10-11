@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">urDineSpot</string>
+    <string name="hello_world">Hope you\'re hungry</string>
+    <string name="register">Fill up this form</string>
+    <string name="current">Add your current location</string>
+    <string name="share">Share something you recommended</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_loc">urDineSpot</string>
+    <string name="title_activity_explore_dish">urDineSpot</string>
+    <string name="title_activity_view_profile">urDineSpot</string>
+    <string name="title_activity_sign_in">urDineSpot</string>
+    <string name="title_activity_spota_dish">urDineSpot</string>
+    <string name="your_location">Your location</string>
+    <string name="title_activity_add_location">AddLocation</string>
+    <string name="title_activity_take_aphoto">TakeAphoto</string>
+    <string name="title_activity_home">Home</string>
+
+</resources>
