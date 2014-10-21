@@ -7,8 +7,6 @@ import android.view.View;
 
 public class SpotaDish extends Activity {
 
-	
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,5 +16,10 @@ public class SpotaDish extends Activity {
 	public void take(View v) {
 		Intent tpic = new Intent(this, TakeAphoto.class);
 		startActivity(tpic);
+	}
+
+	public void view(View v) {
+		Intent view = new Intent(this, ViewDish.class);
+		startActivity(view);
 	}
 }

@@ -44,9 +44,10 @@ public final class R {
         public static final int tab_bg_unselected=0x7f02000f;
         public static final int tab_text_selector=0x7f020010;
         public static final int tabunselcolor=0x7f020011;
+        public static final int temp_img=0x7f020012;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a001c;
+        public static final int action_settings=0x7f0a0024;
         public static final int autoCompleteTextView1=0x7f0a0001;
         public static final int btnCancel=0x7f0a0018;
         public static final int btnlog=0x7f0a0008;
@@ -54,15 +55,23 @@ public final class R {
         public static final int btnsignup=0x7f0a0009;
         public static final int button1=0x7f0a0004;
         public static final int button2=0x7f0a0011;
+        public static final int country=0x7f0a001e;
+        public static final int countrylabel=0x7f0a001d;
+        public static final int flag=0x7f0a0021;
         public static final int fraLayout=0x7f0a0019;
         public static final int imageView1=0x7f0a0013;
         public static final int listView1=0x7f0a0003;
+        public static final int listview=0x7f0a001a;
         public static final int map=0x7f0a000a;
+        public static final int population=0x7f0a0020;
+        public static final int populationlabel=0x7f0a001f;
         public static final int radio_group_list_selector=0x7f0a000b;
+        public static final int rank=0x7f0a001c;
+        public static final int ranklabel=0x7f0a001b;
         public static final int scrollView1=0x7f0a0012;
         public static final int spinView=0x7f0a000c;
-        public static final int tabsLayout=0x7f0a001a;
-        public static final int tabsText=0x7f0a001b;
+        public static final int tabsLayout=0x7f0a0022;
+        public static final int tabsText=0x7f0a0023;
         public static final int textView1=0x7f0a0000;
         public static final int textView2=0x7f0a0014;
         public static final int textView3=0x7f0a0016;
@@ -87,8 +96,11 @@ public final class R {
         public static final int activity_spota_dish=0x7f030007;
         public static final int activity_submit_photo=0x7f030008;
         public static final int activity_take_aphoto=0x7f030009;
-        public static final int activity_view_profile=0x7f03000a;
-        public static final int tabs_bg=0x7f03000b;
+        public static final int activity_view_dish=0x7f03000a;
+        public static final int activity_view_profile=0x7f03000b;
+        public static final int listview_item=0x7f03000c;
+        public static final int singleitemview=0x7f03000d;
+        public static final int tabs_bg=0x7f03000e;
     }
     public static final class menu {
         public static final int add_loc=0x7f090000;
@@ -102,13 +114,17 @@ public final class R {
         public static final int spota_dish=0x7f090008;
         public static final int submit_photo=0x7f090009;
         public static final int take_aphoto=0x7f09000a;
-        public static final int view_profile=0x7f09000b;
+        public static final int view_dish=0x7f09000b;
+        public static final int view_profile=0x7f09000c;
     }
     public static final class string {
         public static final int action_settings=0x7f070005;
         public static final int app_name=0x7f070000;
+        public static final int countrylabel=0x7f070011;
         public static final int current=0x7f070003;
         public static final int hello_world=0x7f070001;
+        public static final int populationlabel=0x7f070012;
+        public static final int ranklabel=0x7f070010;
         public static final int register=0x7f070002;
         public static final int share=0x7f070004;
         public static final int title_activity_add_loc=0x7f070006;
@@ -118,6 +134,7 @@ public final class R {
         public static final int title_activity_sign_in=0x7f070009;
         public static final int title_activity_spota_dish=0x7f07000a;
         public static final int title_activity_take_aphoto=0x7f07000d;
+        public static final int title_activity_view_dish=0x7f07000f;
         public static final int title_activity_view_profile=0x7f070008;
         public static final int your_location=0x7f07000b;
     }
