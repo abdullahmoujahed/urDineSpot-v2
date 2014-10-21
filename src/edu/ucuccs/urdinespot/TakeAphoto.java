@@ -1,14 +1,13 @@
 package edu.ucuccs.urdinespot;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.hardware.Camera;
-import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.ShutterCallback;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -33,29 +32,34 @@ public class TakeAphoto extends Activity {
 		fraLayout.addView(show);
 	}
 
-	private PictureCallback callback = new PictureCallback() {
-		@Override
-		public void onPictureTaken(byte[] data, Camera camera) {
-			// isave ang picture gamit ang FileOutputStream
-			File f = new File(Environment.getExternalStorageDirectory(),
-					"sample.jpg");
-			FileOutputStream fos;
-			try {
-				fos = new FileOutputStream(f);
-				fos.write(data);
-				fos.close();
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+	private void createDirectoryAndSaveFile(Bitmap imageToSave, String fileName) {
+
+		File direct = new File(Environment.getExternalStorageDirectory()
+				+ "/PIC");
+
+		if (!direct.exists()) {
+			File wallpaperDirectory = new File("/PIC");
+			wallpaperDirectory.mkdirs();
 		}
-	};
+
+		File file = new File(new File("/PIC"), fileName);
+		if (file.exists()) {
+			file.delete();
+		}
+		try {
+			FileOutputStream out = new FileOutputStream(file);
+			imageToSave.compress(Bitmap.CompressFormat.JPEG, 100, out);
+			out.flush();
+			out.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	// pag pipindutin ang volume key down
 	public boolean onKeyDown(int keycode, KeyEvent e) {
 		if (KeyEvent.KEYCODE_VOLUME_DOWN == keycode) {
-			localCamera.takePicture(shutterCallback, null, callback);
+			localCamera.takePicture(shutterCallback, null, null);
 		}
 		return true;
 	}
@@ -70,7 +74,10 @@ public class TakeAphoto extends Activity {
 
 	// button para magtake ng picture
 	public void clickTake(View v) {
-		localCamera.takePicture(shutterCallback, null, callback);
+		localCamera.takePicture(shutterCallback, null, null);
+
+		Intent take = new Intent(this, SpotaDish.class);
+		startActivity(take);
 	}
 
 	// iopen ang camera
