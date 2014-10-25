@@ -21,6 +21,9 @@ public class TakeAphoto extends Activity {
 	Camera localCamera;
 	FrameLayout fraLayout;
 	ShowCamera show;
+	Bitmap imageToSave;
+	
+	String sample;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,30 +35,8 @@ public class TakeAphoto extends Activity {
 		fraLayout.addView(show);
 	}
 
-	private void createDirectoryAndSaveFile(Bitmap imageToSave, String fileName) {
 
-		File direct = new File(Environment.getExternalStorageDirectory()
-				+ "/PIC");
-
-		if (!direct.exists()) {
-			File wallpaperDirectory = new File("/PIC");
-			wallpaperDirectory.mkdirs();
-		}
-
-		File file = new File(new File("/PIC"), fileName);
-		if (file.exists()) {
-			file.delete();
-		}
-		try {
-			FileOutputStream out = new FileOutputStream(file);
-			imageToSave.compress(Bitmap.CompressFormat.JPEG, 100, out);
-			out.flush();
-			out.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
+	
 	// pag pipindutin ang volume key down
 	public boolean onKeyDown(int keycode, KeyEvent e) {
 		if (KeyEvent.KEYCODE_VOLUME_DOWN == keycode) {
@@ -76,9 +57,31 @@ public class TakeAphoto extends Activity {
 	public void clickTake(View v) {
 		localCamera.takePicture(shutterCallback, null, null);
 
-		Intent take = new Intent(this, SpotaDish.class);
+		Intent take = new Intent(this, SubmitPhoto.class);
 		startActivity(take);
+		
+		File direct = new File(Environment.getExternalStorageDirectory()
+				+ "/DCIM");
+
+		if (!direct.exists()) {
+			File wallpaperDirectory = new File("/PIC");
+			wallpaperDirectory.mkdirs();
+		}
+
+		File file = new File(new File("/PIC"), sample);
+		if (file.exists()) {
+			file.delete();
+		}
+		try {
+			FileOutputStream out = new FileOutputStream(file);
+			imageToSave.compress(Bitmap.CompressFormat.JPEG, 100, out);
+			out.flush();
+			out.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+	
 
 	// iopen ang camera
 	public static Camera getInstanceCamera() {

@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.devcon.devise.SumitPhoto" >
+    tools:context="edu.ucuccs.urdinespot.SubmitPhoto" >
 
     <item
         android:id="@+id/action_settings"

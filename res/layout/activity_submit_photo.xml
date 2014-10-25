@@ -1,14 +1,8 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_signup" >
-
-    <LinearLayout
-        android:layout_width="fill_parent"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/bg_signup"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -21,19 +15,18 @@
             android:src="@drawable/ic_explore" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txt1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5sp"
             android:layout_marginTop="5dp"
             android:paddingTop="10dp"
-            android:text="TITLE"
-           
-            android:textColor="#163F5F"
+            android:text="Name"
+            android:textColor="#fff"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/txtTitle"
+            android:id="@+id/txtName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" >
 
@@ -41,15 +34,15 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/qw"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5sp"
             android:layout_marginTop="5dp"
             android:paddingTop="5dp"
-            android:text="DESCRIPTION"
+            android:text="Description"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#163F5F"
+            android:textColor="#fff"
             android:textStyle="bold" />
 
         <EditText
@@ -62,19 +55,21 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:onClick="clickSubmit"
-            android:text="Submit Photo" />
+            android:text="Submit Photo"
+            android:textColor="#fff"
+            android:textColorLink="#fff" />
 
         <Button
             android:id="@+id/btnCancel"
-            android:layout_width="fill_parent"
+            android:layout_width="131dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:onClick="clickCancel"
-            android:text="Cancel" />
-    </LinearLayout>
+            android:text="Cancel"
+            android:textColor="#fff" />
 
-</ScrollView>
+    </LinearLayout>

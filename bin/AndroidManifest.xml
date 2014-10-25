@@ -65,6 +65,10 @@
             android:name=".ViewDish"
             android:label="@string/title_activity_view_dish" >
         </activity>
+        <activity
+            android:name=".SubmitPhoto"
+            android:label="@string/title_activity_submit_photo" >
+        </activity>
     </application>
 
 </manifest>

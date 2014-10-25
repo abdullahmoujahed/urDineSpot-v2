@@ -18,7 +18,8 @@
     <string name="title_activity_home">Home</string>
     <string name="title_activity_view_dish">ViewDish</string>
     <string name="ranklabel">"Rank : "</string>
-    <string name="countrylabel">"Country : "</string>
-    <string name="populationlabel">"Population : "</string>
+    <string name="countrylabel">"Name : "</string>
+    <string name="populationlabel">"Description : "</string>
+    <string name="title_activity_submit_photo">SubmitPhoto</string>
 
 </resources>
